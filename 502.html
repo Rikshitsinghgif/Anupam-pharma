@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Starting</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .tip {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .loader {
+            border: 4px solid #f3f3f3; /* Light grey border */
+            border-top: 4px solid #3498db; /* Blue border */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+        }
+        .hidden {
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="status-heading">Service is Starting</h1>
+    <p id="status-message">The application is currently launching.</p>
+    <p class="tip">The page will automatically refresh once the site is available.</p>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+</div>
+
+<script>
+    function checkAvailability() {
+        fetch('/')
+            .then(response => {
+                if (response.ok) {
+                    window.location.reload();
+                } else {
+                    setTimeout(checkAvailability, 5000);
+                }
+            })
+            .catch(() => {
+                setTimeout(checkAvailability, 5000);
+            });
+    }
+    document.addEventListener('DOMContentLoaded', checkAvailability);
+</script>
+</body>
+</html>

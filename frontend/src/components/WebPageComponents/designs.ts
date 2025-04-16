@@ -1,0 +1,77 @@
+export enum GalleryPortfolioDesigns {
+  DEFAULT_DESIGN,
+  HORIZONTAL_WITH_BUTTONS,
+  OVERLAPPING_CENTRAL_IMAGE,
+}
+
+export enum HeroDesigns {
+  DEFAULT_DESIGN,
+  IMAGE_LEFT,
+  IMAGE_RIGHT,
+  IMAGE_BG,
+  TEXT_CENTER,
+}
+
+export enum ContactFormDesigns {
+  DEFAULT_DESIGN,
+  SIMPLE_CLEAN,
+  SIMPLE_CLEAN_DIVERSITY,
+  HIGHLIGHTED,
+  HIGHLIGHTED_DIVERSITY,
+  WITH_IMAGE,
+}
+
+export enum FaqDesigns {
+  DEFAULT_DESIGN,
+  ACCORDION,
+  SPLIT_LIST,
+  SPLIT_LIST_DIVERSITY,
+  TWO_COLUMN,
+}
+
+export enum FeaturesDesigns {
+  DEFAULT_DESIGN,
+  CARDS_GRID_WITH_ICONS,
+  CARDS_GRID_WITH_ICONS_DIVERSITY,
+  ICONS_TOP,
+  LARGE_NUMBERS,
+  ICONS_WITH_IMAGE,
+}
+
+export enum TestimonialsDesigns {
+  DEFAULT_DESIGN,
+  HORIZONTAL_CAROUSEL,
+  HORIZONTAL_CAROUSEL_WITH_BG,
+  HORIZONTAL_CAROUSEL_DIVERSITY,
+  MULTI_CARD_DISPLAY,
+}
+
+export enum AboutUsDesigns {
+  DEFAULT_DESIGN,
+  IMAGE_LEFT,
+  IMAGE_RIGHT,
+}
+
+export enum PricingDesigns {
+  DEFAULT_DESIGN,
+}
+
+export enum HeaderStyle {
+  PAGES_RIGHT,
+  PAGES_LEFT,
+}
+
+export enum FooterStyle {
+  WITH_PAGES,
+  WITH_PROJECT_NAME,
+}
+
+export enum HeaderDesigns {
+  DESIGN_DIVERSITY,
+  DEFAULT_DESIGN,
+}
+
+export enum FooterDesigns {
+  DESIGN_DIVERSITY,
+  DEFAULT_DESIGN,
+}
